@@ -1,0 +1,54 @@
+<div class="row"><div class="co12">
+	<h4>Inicio / Centro de cupones</h4>
+	<% if(user){ %>
+			    	<h5>Hola, <%= user[0].name %></h5>
+	<% } else{ %>  
+	    
+	<% } %>
+</div></div>
+<div class="row">
+	<div class="col s12">
+
+		<% if(user){ %>
+			
+			
+			    	
+			  
+			    
+			
+		<% } else{ %> 
+		
+		    <a class="waves-effect waves-light btn">Iniciar sesion con Facebook</a>
+		<% } %>
+
+	<div id="cards">
+		<div v-if="status">
+			<ticket-card 
+			v-for="(ticket, index) in tickets"
+			:title="ticket.title"
+			:descripcion="ticket.descripcion"
+			:discount="ticket.discount"
+			:image="ticket.image"
+			>< /ticket-card>
+		</div>
+		<div v-else>
+		  <h4>Oopssss! Tenemos un problema... Seguro estamos trabajando en esto.</h4>
+		</div>
+	</div>
+
+</div>
+	    
+
+
+
+
+
+	</div>
+	
+	        
+	</div>
+</div>
+
+
+
+<script src="/js/home/index.js"></script>
